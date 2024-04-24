@@ -1,0 +1,15 @@
+{
+    "name": "makecode-minecraft-chiseled-bookshelf",
+    "description": "",
+    "version": "0.0.1",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "chiseledBookshelf.ts"
+    ],
+    "preferredEditor": "tsprj",
+    "supportedTargets": [
+        "minecraft"
+    ]
+}
