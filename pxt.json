@@ -6,7 +6,8 @@
         "core": "*"
     },
     "files": [
-        "chiseledBookshelf.ts"
+        "chiseledBookshelf.ts",
+        "_locales/ja/makecode-minecraft-chiseled-bookshelf-strings.json"
     ],
     "preferredEditor": "tsprj",
     "supportedTargets": [
