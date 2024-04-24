@@ -15,7 +15,7 @@ namespace chiseledBookshelf {
             return player.execute("playanimation @c shake_head");
         const new_books_stored = books_stored + 2 ** (slot - 1);
         player.execute("playanimation @c swing_hand");
-        block.loadStructure(
+        blocks.loadStructure(
             `chiseled_bookshelves:bookshelf_${new_books_stored}`,
             getAgentFacingPosition(),
             direction
@@ -37,7 +37,7 @@ namespace chiseledBookshelf {
             return player.execute("playanimation @c shake_head");
         const new_books_stored = books_stored - 2 ** (slot - 1);
         player.execute("playanimation @c swing_hand");
-        block.loadStructure(
+        blocks.loadStructure(
             `chiseled_bookshelves:bookshelf_${new_books_stored}`,
             getAgentFacingPosition(),
             direction
@@ -51,8 +51,8 @@ namespace chiseledBookshelf {
         return false;
     }
 
-    function bookIsPlacedInSlot(slot: number, books_stored): boolean {
-        return Boolean((books_stored >> (slot - 1)) & 1);
+    function bookIsPlacedInSlot(slot: number, books_stored: number): boolean {
+        return !!((books_stored >> (slot - 1)) & 1);
     }
 
     function getAgentFacingPosition(): Position {
@@ -66,7 +66,7 @@ namespace chiseledBookshelf {
             case 2:
                 return positions.add(agent.getPosition(), pos(0, 0, 1));
             default:
-                return agentIsFacingToBlock.getPosition();
+                return agent.getPosition();
         }
     }
 }
