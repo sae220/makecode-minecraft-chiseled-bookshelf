@@ -14,7 +14,7 @@ namespace chiseledBookshelf {
         if (bookIsPlacedInSlot(slot, books_stored))
             return player.execute("playanimation @c shake_head");
         const new_books_stored = books_stored + 2 ** (slot - 1);
-        player.execute("playanimation @c swing_hand");
+        player.execute("playanimation @c swing_arm");
         blocks.loadStructure(
             `chiseled_bookshelves:bookshelf_${new_books_stored}`,
             getAgentFacingPosition(),
@@ -36,7 +36,7 @@ namespace chiseledBookshelf {
         if (!bookIsPlacedInSlot(slot, books_stored))
             return player.execute("playanimation @c shake_head");
         const new_books_stored = books_stored - 2 ** (slot - 1);
-        player.execute("playanimation @c swing_hand");
+        player.execute("playanimation @c swing_arm");
         blocks.loadStructure(
             `chiseled_bookshelves:bookshelf_${new_books_stored}`,
             getAgentFacingPosition(),
