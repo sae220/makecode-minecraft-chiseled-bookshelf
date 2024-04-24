@@ -1,4 +1,5 @@
 {
-    "chiseledBookshelf.agentPlaceBookIntoBookshelf|block": "エージェントに模様付き本棚のスロット$slot番に本を収納させる",
-    "chiseledBookshelf.agentRemoveBookFromBookshelf|block": "エージェントに模様付き本棚のスロット$slot番から本を取り出させる"
+    "chiseledBookshelf.agentPlaceBookIntoBookshelf|block": "エージェントに模様入りの本棚のスロット$slot番に本を収納させる",
+    "chiseledBookshelf.agentRemoveBookFromBookshelf|block": "エージェントに模様入りの本棚のスロット$slot番から本を取り出させる",
+    "{id:group}Chiseled Bookshelf": "模様入りの本棚"
 }
