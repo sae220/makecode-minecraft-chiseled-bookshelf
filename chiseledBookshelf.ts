@@ -2,7 +2,7 @@
 namespace chiseledBookshelf {
     //% block="agent place a book into slot $slot in a bookshelf"
     //% weight=2
-    //% slot.min=1 slot.max=6
+    //% slot.defl=1 slot.min=1 slot.max=6
     export function agentPlaceBookIntoBookshelf(slot: number) {
         if (agent.inspect(AgentInspection.Block, SixDirection.Forward) != Block.ChiseledBookshelf)
             return player.execute("playanimation @c shake_head");
@@ -24,7 +24,7 @@ namespace chiseledBookshelf {
 
     //% block="agent remove a book from slot $slot in a bookshelf"
     //% weight=1
-    //% slot.min=1 slot.max=6
+    //% slot.defl=1 slot.min=1 slot.max=6
     export function agentRemoveBookFromBookshelf(slot: number) {
         if (agent.inspect(AgentInspection.Block, SixDirection.Forward) != Block.ChiseledBookshelf)
             return player.execute("playanimation @c shake_head");
