@@ -1,4 +1,6 @@
-//% color="#D83B01" weight=65
+//% block="Chiseled Bookshelf"
+//% weight=65
+//% color="#D83B01" 
 namespace chiseledBookshelf {
     //% block="agent place a book into slot $slot in a bookshelf"
     //% weight=2
