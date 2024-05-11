@@ -59,14 +59,14 @@ namespace chiseledBookshelf {
 
     function getAgentFacingPosition(): Position {
         switch (positions.toCompassDirection(agent.getOrientation())) {
-            case 4:
-                return positions.add(agent.getPosition(), pos(1, 0, 0));
-            case 1:
-                return positions.add(agent.getPosition(), pos(-1, 0, 0));
             case 0:
                 return positions.add(agent.getPosition(), pos(0, 0, -1));
+            case 1:
+                return positions.add(agent.getPosition(), pos(1, 0, 0));
             case 2:
                 return positions.add(agent.getPosition(), pos(0, 0, 1));
+            case 4:
+                return positions.add(agent.getPosition(), pos(-1, 0, 0));
             default:
                 return agent.getPosition();
         }
